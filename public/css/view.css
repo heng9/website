@@ -1,0 +1,65 @@
+/* 右侧banner部分 */
+.content .banner{
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background: url(../img/banner_bg.png) repeat-x;
+}
+
+/* 主要内容导航 */
+.content .nav{
+	padding: 15px 0 5px 0;
+	border-bottom: solid #d8e4e6 1px;
+}
+.content .main{
+	padding: 20px 0;
+	border-bottom: solid #d8e4e6 1px;
+}
+.content .main .photo-album{
+	padding: 8px;
+	border: #d8e4e6 solid 1px;
+	box-shadow: 0 0 4px rgba(0,0,0,.2);
+}
+.content .main .left-photo{
+	padding-bottom: 10px;
+	border-bottom: solid #d8e4e6 1px;
+}
+.content .main .left-photo img{
+	height: 320px;
+}
+.content .main .photo-album-foot{
+	padding-top: 10px;
+}
+
+.content .main .lb{
+	height: 379px;
+	border: 1px #d8e4e6 solid;
+	color: #999;
+}
+.content .main .lb .lb1{
+	padding: 10px 20px;
+	border-bottom: 1px #d8e4e6 solid;
+}
+
+.content .main .lb .lb2{
+	padding: 10px 20px;
+	border-bottom: 1px #d8e4e6 solid;
+	background-color: #fbfafa;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.content .main .lb .lb2 p{
+	text-indent: 2.5rem;
+	height: 74px;
+}
+.content .main .lb .lb3{
+	padding: 10px 20px;
+	border-bottom: 1px #d8e4e6 solid;
+}
+.content .main .lb .lb4{
+	padding: 10px 20px;
+}
+
+.content .other{
+	margin-top: 20px;
+}

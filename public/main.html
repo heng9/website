@@ -1,0 +1,92 @@
+<!-- 左侧导航 -->
+<div class="left-nav">
+    <div class="item">
+        <a href="javascript:;">
+            <h1><i class="glyphicon glyphicon-home"></i></h1>
+            <span>首页</span>
+        </a>
+    </div>
+    <div class="item" v-for="(item, index) in items">
+        <a class="product" href="javascript:;">
+            <h1><i class="glyphicon glyphicon-home"></i></h1>
+            <span>jQuery库</span>
+        </a>
+        <div class="product-wrap" style="display: none;">
+            <div class="title">
+                <i class="glyphicon glyphicon-home"></i> jQuery库
+            </div>
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li v-for="(item, index) in items25">
+                        <a href="javascript:;">
+                            <i class="glyphicon glyphicon-home"></i> 瀑布流插件
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 主要内容 -->
+<div class="right-main">
+    <div class="banner"></div>
+    <div class="content">
+        <div class="nav">
+            <img src="img/nav.png">
+            <span>当前位置 &gt; </span>
+            <span>首页 &gt; </span>
+            <span>CSS库</span>
+        </div>
+        <div class="main">
+            <ul class="list-inline">
+                <li v-for="item in items12">
+                    <div class="detail">
+                        <img src="img/item.jpg">
+                        <div class="text">
+                            <div class="title"><b>Material Design风格用户注册登录界面设计</b></div>
+                            <div class="info">这是一款Material Design风格用户注册登录界面设计效果。该设计由用户登录，用户注册和忘记密码三个界面组成。设计中的所有元素都</div>
+                            <div class="meta">
+                                <span class="fl">
+                                    <i class="glyphicon glyphicon-leaf"></i>&nbsp;
+                                    <i class="glyphicon glyphicon-send"></i>&nbsp;
+                                    <i class="glyphicon glyphicon-home"></i>&nbsp;
+                                </span>
+                                <span class="fr"><i class="glyphicon glyphicon-time"></i> 2017-03-03</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="pagination">
+        <ul class="pagination" id="my-pagination-section"></ul>
+    </div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#mainContent',
+        data: {
+            items: [1, 2, 3, 4],
+            items12: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+            items25: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+        }
+    });
+    $(function(){
+        $(".left-nav .item").hover(function(){
+            $(this).find(".product-wrap").show();
+        }, function(){
+            $(this).find(".product-wrap").hide();
+        });
+        //分页
+        $('#my-pagination-section').jqPaginator({
+            totalCounts: 100,
+            pageSize: 20,
+            currentPage: 1,
+            onPageChange: function(num, type) {
+
+            }
+        });
+    })
+</script>
